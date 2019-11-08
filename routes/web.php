@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('admin.login');
+    return view('welcome');
 });
+
+Route::get('/admin', 'Admin\LoginController@login');

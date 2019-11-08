@@ -19,9 +19,21 @@
     $pdo = DB::connection()->getPdo();
     dd($pdo);
 
-## 引入後台模板 admin資料夾
+## 建置平台
+
+#### 引入後台模板 admin資料夾
 >* [取得博客後台模板,參考github基于laravel5.2的博客view/admin資料夾]
 (https://github.com/yanqiangmiffy/laravel-blog)
 
 #### 修改模板內容
 >* 更改 login.blade.php 相關link 使用asset()對應至style路徑
+
+#### 控制器
+>* 建立Admin資料夾
+
+>* 建立公用控制器 CommonController
+
+>* 建立登入控制器 loginController 繼承 CommonController,回傳login畫面
+
+#### 路由
+>* 配置登入路由
