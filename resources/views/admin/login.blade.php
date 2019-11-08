@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 	{{-- 適用檔案放在public <link rel="stylesheet" href="{{asset('style/css/ch-ui.admin.css')}}">
     <link rel="stylesheet" href="{{asset('style/font/css/font-awesome.min.css')}}"> 適用檔案放在public--}}
-    
+
     <link rel="stylesheet" href="{{asset('/resources/views/admin/style/css/ch-ui.admin.css')}}">
     <link rel="stylesheet" href="{{asset('/resources/views/admin/style/font/css/font-awesome.min.css')}}">
 </head>
@@ -29,8 +29,8 @@
 					</li>
 					<li>
 						<input type="text" class="code" name="code"/>
-						<span><i class="fa fa-check-square-o"></i></span>
-						<img src="{{url('admin/code')}}" alt="" onclick="this.src='{{url('admin/code')}}?'+Math.random()">
+                        <span><i class="fa fa-check-square-o"></i></span>
+                    <img src="{{url('admin/code')}}" alt="" onclick="this.src='{{url('admin/code')}}?' + Math.random()">
 					</li>
 					<li>
 						<input type="submit" value="立即登陆"/>

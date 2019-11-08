@@ -51,3 +51,4 @@
 
 >* 在最外層index.php加入 session_start() : 才能打開$_SESSION的變數啟用
 
+>* 模板使用驗證碼: login.blade.php加入img寫法
