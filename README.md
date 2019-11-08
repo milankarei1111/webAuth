@@ -37,3 +37,17 @@
 
 #### 路由
 >* 配置登入路由
+
+#### 驗證碼
+
+>* [取得驗證碼,參考github基于laravel5.2的博客org資料夾]
+(https://github.com/yanqiangmiffy/laravel-blog/resources)
+
+>* 複製org資料夾至resources下
+
+>* 配置驗證路由
+
+>* loginController的code方法並引入驗證碼類
+
+>* 在最外層index.php加入 session_start() : 才能打開$_SESSION的變數啟用
+
