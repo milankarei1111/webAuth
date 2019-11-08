@@ -24,6 +24,4 @@
 (https://github.com/yanqiangmiffy/laravel-blog)
 
 #### 修改模板內容
->* 將views/admin/style資料夾複製至public資料夾 
-
->* 更改 login.blade.php 相關link 使用asset()對應至puble/style路徑
+>* 更改 login.blade.php 相關link 使用asset()對應至style路徑
