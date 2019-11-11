@@ -2,28 +2,28 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
-require_once 'resources/org/code/Code.class.php';
+use App\Lib\Code\Code;
 
 class LoginController extends CommonController
 {
     //
-    public function login(){
-        return view('admin.login');
+    public function login(Request $request)
+    {
+        $data = $request->all();
+        if($data) {
+            $code = new Code;
+           if($data['code'] != $code->get()){
+             return back()->with('msg', '驗證碼錯誤')->withInput($request->except('password'));
+           }
+        } else {
+            return view('admin.login');
+        }
     }
 
     public function code()
     {
-        $code = new \Code;
+        $code = new Code;
         $code->make();
     }
-
-    public function getCode()
-    {
-       $code = new \Code;
-       echo $code->get();
-    }
-
 }

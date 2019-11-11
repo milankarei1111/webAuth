@@ -2,22 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-	{{-- 適用檔案放在public <link rel="stylesheet" href="{{asset('style/css/ch-ui.admin.css')}}">
-    <link rel="stylesheet" href="{{asset('style/font/css/font-awesome.min.css')}}"> 適用檔案放在public--}}
-
-    <link rel="stylesheet" href="{{asset('/resources/views/admin/style/css/ch-ui.admin.css')}}">
-    <link rel="stylesheet" href="{{asset('/resources/views/admin/style/font/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" href="{{asset('style/css/ch-ui.admin.css')}}">
+    <link rel="stylesheet" href="{{asset('style/font/css/font-awesome.min.css')}}">
 </head>
 <body style="background:#F3F3F4;">
 	<div class="login_box">
 		<h1>Blog</h1>
 		<h2>欢迎使用博客管理平台</h2>
 		<div class="form">
-            @if(session('msg'))
-			<p style="color:red">{{session('msg')}}</p>
-            @endif
-			<form action="#" method="post">
-				{{csrf_field()}}
+           @if (Session::has('msg'))
+                <p style="color:red">{{Session::get('msg')}}</p>
+           @endif
+			<form action="" method="post">
+                {{csrf_field()}}
 				<ul>
 					<li>
 					<input type="text" name="user_name" class="text"/>

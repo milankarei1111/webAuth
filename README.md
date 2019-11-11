@@ -52,3 +52,9 @@
 >* 在public\index.php加入 session_start() : 才能打開$_SESSION的變數啟用
 
 >* 模板使用驗證碼: login.blade.php加入img寫法
+
+## 驗證驗證碼
+
+>* login.blade.php 使用Session::has 來判斷錯誤
+
+>* LoginController.php 取得請求輸入值與判斷驗證碼、若錯誤則提示並回傳上次參數
