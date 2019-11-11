@@ -43,12 +43,12 @@
 >* [取得驗證碼,參考github基于laravel5.2的博客org資料夾]
 (https://github.com/yanqiangmiffy/laravel-blog/resources)
 
->* 複製org資料夾至resources下
+>* 複製org\code資料夾至app\Lib下 改名為
 
 >* 配置驗證路由
 
 >* loginController的code方法並引入驗證碼類
 
->* 在最外層index.php加入 session_start() : 才能打開$_SESSION的變數啟用
+>* 在public\index.php加入 session_start() : 才能打開$_SESSION的變數啟用
 
 >* 模板使用驗證碼: login.blade.php加入img寫法
