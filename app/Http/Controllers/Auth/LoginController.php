@@ -36,4 +36,15 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    // public function username(){
+    //     return 'name'; // 改以name來驗證
+    // }
+
+    protected function redirectTo()
+    {
+        return '/test'; // 登入成功跳轉至test頁
+    }
+
+
 }
